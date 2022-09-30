@@ -13,11 +13,11 @@ namespace Task1.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string data)
         {
-            return View();
+            return View((object)data);
         }
 
-     
+        
     }
 }

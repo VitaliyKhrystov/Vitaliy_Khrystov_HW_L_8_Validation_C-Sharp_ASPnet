@@ -9,10 +9,12 @@ namespace Task1.Models
 
         [Required]
         [StringLength(15)]
+        [Display(Name = "Ім'я")]
         public string Name { get; set; }
 
         [Required]
         [StringLength(15)]
+        [Display(Name = "Фамілія")]
         public string Surname { get; set; }
 
         [Required]

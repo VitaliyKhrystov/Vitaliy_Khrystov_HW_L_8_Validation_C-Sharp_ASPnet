@@ -1,9 +1,16 @@
-﻿@{
+﻿@model object
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-   <form >
-
-   </form>
+   
+    @if(Model != null)
+    {
+        <p style="color:blue; font-size:50px; margin: 50px 0;">@Model</p>
+    }else{
+         <p>
+                <a asp-controller="Register" asp-action="Register" style="color:green; font-size:50px; margin: 50px 0;">Registration</a>
+        </p>
+    }
 </div>
