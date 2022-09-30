@@ -1,0 +1,79 @@
+﻿@model PersonRegister
+@{
+    ViewBag.Title = "Registration";
+}
+
+<div style="display:flex; justify-content:center;" class="main_div">
+        <form asp-action="Register" method="post">
+            <div class="div_input">
+                 <label asp-for="Name"></label>
+                 <input asp-for="Name" class="input_text"/>
+                 <span asp-validation-for="Name" class="danger"></span>
+            </div>
+
+            <div class="div_input">
+                <label asp-for="Surname"></label>
+                <input asp-for="Surname" class="input_text"/>
+                <span asp-validation-for="Surname" class="danger"></span>
+                </div>
+
+            <div class="div_input">
+                 <label asp-for="Email"></label>
+                 <input asp-for="Email" class="input_text"/>
+                 <span asp-validation-for="Email" class="danger"></span>
+            </div>
+
+            <div class="div_input">
+                 <label asp-for="Date"></label>
+                 <input asp-for="Date" class="input_text"/>
+                 <span asp-validation-for="Date" class="danger"></span>
+             </div>
+
+              <div class="div_input">
+                  <input type="submit" value="Register" class="submit"/>
+             </div>
+        </form>
+</div>
+
+<style>
+    .main_div{
+        width:400px;
+        background-color:aqua;
+        border: 1px solid blue;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+    .div_input{
+         margin: 20px;
+    }
+
+    label{
+        font-size: 25px;
+    }
+
+    .input_text{
+        width: 100%;
+        padding: 5px;
+        font-size: 25px;
+        border-radius: 10px;
+        color:deeppink
+    }
+
+    .submit{
+        padding: 5px 15px;
+        background-color:greenyellow;
+        border-radius:10px;
+        font-size: 25px;
+    }
+
+    .submit:hover {
+        background-color: blue;
+        color:white;
+    }
+
+    .danger{
+        font-size: 25px;
+        color:red;
+    }
+</style>
