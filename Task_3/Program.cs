@@ -1,11 +1,7 @@
-namespace Task2
+namespace Task_3
 {
     public class Program
     {
-
-        //Задание 2
-        //Для формы из предыдущего задания добавьте валидацию на стороне клиента.
-
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +28,7 @@ namespace Task2
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{data?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
